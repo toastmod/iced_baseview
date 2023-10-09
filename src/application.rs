@@ -4,6 +4,7 @@ mod profiler;
 mod state;
 
 use baseview::EventStatus;
+use raw_window_handle::HasRawWindowHandle;
 pub use state::State;
 
 use crate::core;
@@ -168,9 +169,9 @@ where
 
     let compositor_settings = A::renderer_settings();
 
-    let window = crate::wrapper::WindowHandleWrapper(window);
-    let (mut compositor, renderer) = C::new(compositor_settings, Some(&window))?;
-    let surface = compositor.create_surface(
+    // let window = crate::wrapper::WindowHandleWrapper(window);
+    let (mut compositor, renderer) = C::new::<baseview::Window<'_>>(compositor_settings, Some(&window))?;
+    let surface = compositor.create_surface::<baseview::Window<'_>>(
         &window,
         viewport.physical_width(),
         viewport.physical_height(),
