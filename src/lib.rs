@@ -53,9 +53,7 @@ pub use settings::Settings;
 pub use iced_graphics::Viewport;
 use style::application::StyleSheet;
 
-pub mod baseview {
-    pub use baseview::{Size, WindowOpenOptions, WindowScalePolicy};
-}
+pub use baseview;
 
 use iced_widget::renderer;
 use window::WindowSubs;
