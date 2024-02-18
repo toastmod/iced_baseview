@@ -24,11 +24,19 @@ wgpu = ["iced_renderer/wgpu"]
 baseview = { git = "https://github.com/RustAudio/baseview.git", rev="f0639b7" }
 cfg-if = "1"
 copypasta = "0.8"
-iced_runtime = "0.1"
-iced_renderer = "0.1"
-iced_graphics = "0.9"
-iced_style = "0.9"
-iced_widget = "0.1"
+#iced_runtime = "0.1"
+#iced_renderer = "0.1"
+#iced_graphics = "0.9"
+#iced_style = "0.9"
+#iced_widget = "0.1.3"
+
+iced_runtime = { git = "https://github.com/iced-rs/iced", rev = "751ea77c29f6eb3d00f45f0a04c833a1d03a425c"}
+iced_renderer = { git = "https://github.com/iced-rs/iced", rev = "751ea77c29f6eb3d00f45f0a04c833a1d03a425c"}
+iced_graphics = { git = "https://github.com/iced-rs/iced", rev = "751ea77c29f6eb3d00f45f0a04c833a1d03a425c"}
+iced_style = { git = "https://github.com/iced-rs/iced", rev = "751ea77c29f6eb3d00f45f0a04c833a1d03a425c"}
+iced_widget = { git = "https://github.com/iced-rs/iced", rev = "751ea77c29f6eb3d00f45f0a04c833a1d03a425c"}
+
+
 keyboard-types = { version = "0.6", default-features = false }
 log = "0.4"
 raw-window-handle = "0.5"

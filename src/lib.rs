@@ -53,7 +53,7 @@ pub use iced_graphics::Viewport;
 use style::application::StyleSheet;
 
 pub mod baseview {
-    pub use baseview::{Size, WindowOpenOptions, WindowScalePolicy};
+    pub use baseview::{Size, WindowOpenOptions, WindowScalePolicy, Event, WindowEvent, MouseEvent, EventStatus};
 }
 
 use iced_widget::renderer;
